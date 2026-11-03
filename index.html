@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070b14">
+  <title>PPO Estúdios — Histórias que criam universos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="intro" class="intro-screen" aria-label="Abertura PPO Estúdios">
+    <div class="intro-glow"></div>
+    <div class="intro-logo-wrap">
+      <div class="intro-symbol">P</div>
+      <div class="intro-wordmark">PPO <span>ESTÚDIOS</span></div>
+      <div class="intro-tagline">HISTÓRIAS QUE CRIAM UNIVERSOS</div>
+    </div>
+    <div class="intro-line"></div>
+  </div>
+
+  <main id="app" class="app-shell is-hidden">
+    <!-- LOGIN -->
+    <section id="login-screen" class="gate-screen">
+      <div class="gate-backdrop"></div>
+      <div class="gate-card">
+        <div class="mini-brand"><b>PPO</b><span>ESTÚDIOS</span></div>
+        <p class="eyebrow">SEU UNIVERSO DE ENTRETENIMENTO</p>
+        <h1>Entre para<br><em>esse universo.</em></h1>
+        <p class="muted">Filmes, séries e histórias originais esperam por você.</p>
+        <label class="field-label" for="login-name">Como podemos chamar você?</label>
+        <input id="login-name" class="text-field" maxlength="22" placeholder="Seu nome" autocomplete="nickname">
+        <button id="enter-button" class="primary-button wide">ENTRAR <span>→</span></button>
+        <p class="fine-print">Protótipo de demonstração • perfil salvo neste dispositivo</p>
+      </div>
+      <div class="gate-footer">PPO ESTÚDIOS <span>© 2026</span></div>
+    </section>
+
+    <!-- PROFILE PICKER -->
+    <section id="profile-screen" class="profile-screen is-hidden">
+      <header class="simple-header"><div class="mini-brand"><b>PPO</b><span>ESTÚDIOS</span></div><button id="back-login" class="text-button">SAIR</button></header>
+      <div class="profile-content">
+        <p class="eyebrow">BEM-VINDO AO SEU ESPAÇO</p>
+        <h1>Quem está<br>assistindo?</h1>
+        <div id="profile-list" class="profile-list"></div>
+        <div class="profile-create">
+          <h2>Criar novo perfil</h2>
+          <label class="field-label" for="profile-name">Nome do perfil</label>
+          <input id="profile-name" class="text-field" maxlength="18" placeholder="Ex.: Pedro">
+          <p class="field-label avatar-heading">Escolha um personagem PPO</p>
+          <div id="avatar-picker" class="avatar-picker" role="radiogroup" aria-label="Personagens para foto de perfil"></div>
+          <button id="create-profile" class="primary-button">CRIAR PERFIL <span>＋</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN STREAMING HOME -->
+    <section id="browse-screen" class="browse-screen is-hidden">
+      <header class="topbar">
+        <button class="brand-button" data-view="home"><span class="brand-mark">P</span><span class="brand-name">PPO<small>ESTÚDIOS</small></span></button>
+        <nav class="main-nav">
+          <button class="nav-link active" data-view="home">Início</button>
+          <button class="nav-link" data-view="films">Filmes</button>
+          <button class="nav-link" data-view="series">Séries</button>
+          <button class="nav-link" data-view="productions">Produções</button>
+          <button class="nav-link" data-view="pedro">Pedro Prime</button>
+        </nav>
+        <div class="top-actions">
+          <button id="search-toggle" class="icon-button" aria-label="Abrir pesquisa">⌕</button>
+          <button id="profile-menu" class="profile-chip" aria-label="Trocar perfil"><span id="active-avatar">⚡</span><b id="active-name">Perfil</b><i>⌄</i></button>
+        </div>
+      </header>
+
+      <section id="search-panel" class="search-panel is-hidden">
+        <div class="search-inner">
+          <div class="search-input-wrap"><span>⌕</span><input id="search-input" type="search" placeholder="Qual história você procura?" autocomplete="off"><button id="clear-search" aria-label="Limpar pesquisa">×</button></div>
+          <div class="alphabet" id="alphabet-filter" aria-label="Pesquisar por letra"></div>
+          <p class="search-hint">PESQUISE PELO TÍTULO OU ESCOLHA UMA LETRA</p>
+          <div id="search-results" class="poster-grid compact-grid"></div>
+        </div>
+      </section>
+
+      <div id="main-content">
+        <section id="home-view" class="view">
+          <section class="hero hero-home">
+            <div class="hero-art hero-art-home"><div class="hero-orbit"></div><div class="hero-monogram">P</div><div class="hero-lightning">ϟ</div></div>
+            <div class="hero-copy">
+              <p class="eyebrow">UMA PRODUÇÃO ORIGINAL PPO</p>
+              <p class="hero-kicker">O UNIVERSO ESTÁ PRESTES A MUDAR</p>
+              <h1>HISTÓRIAS<br><span>SEM LIMITES.</span></h1>
+              <p class="hero-description">Grandes aventuras. Novos mundos. Personagens que ficam com você.</p>
+              <div class="hero-buttons"><button class="primary-button" data-view="productions">EXPLORAR PRODUÇÕES <span>→</span></button><button class="ghost-button" data-view="pedro">CONHECER PEDRO PRIME</button></div>
+            </div>
+            <div class="hero-bottom-label">PPO ORIGINALS <span>•</span> FILMES & SÉRIES</div>
+          </section>
+          <section class="content-section">
+            <div class="section-heading"><div><p class="eyebrow">O QUE VEM POR AÍ</p><h2>Em breve na PPO</h2></div><button class="see-all" data-view="productions">Ver catálogo <span>→</span></button></div>
+            <div id="coming-soon-row" class="poster-row"></div>
+          </section>
+          <section class="content-section second-section">
+            <div class="section-heading"><div><p class="eyebrow">UNIVERSOS ORIGINAIS</p><h2>Produções em destaque</h2></div></div>
+            <div id="featured-row" class="poster-row"></div>
+          </section>
+          <section class="editorial-banner">
+            <div><p class="eyebrow">UM UNIVERSO PRÓPRIO</p><h2>Não é só assistir.<br><span>É fazer parte.</span></h2><p>Descubra os mundos e personagens criados pela PPO Estúdios.</p></div>
+            <button class="ghost-button" data-view="productions">VER TODAS AS PRODUÇÕES</button>
+          </section>
+        </section>
+
+        <section id="films-view" class="view is-hidden catalog-view">
+          <div class="page-heading"><p class="eyebrow">PPO ESTÚDIOS • CATÁLOGO</p><h1>Filmes</h1><p>Longas-metragens, animações e aventuras originais.</p></div>
+          <div id="films-grid" class="poster-grid"></div>
+        </section>
+        <section id="series-view" class="view is-hidden catalog-view">
+          <div class="page-heading"><p class="eyebrow">PPO ESTÚDIOS • CATÁLOGO</p><h1>Séries</h1><p>Histórias que continuam a cada episódio.</p></div>
+          <div id="series-grid" class="poster-grid"></div>
+        </section>
+        <section id="productions-view" class="view is-hidden catalog-view">
+          <div class="page-heading"><p class="eyebrow">O CATÁLOGO COMPLETO</p><h1>Produções PPO</h1><p>Um catálogo em expansão. Novos mundos estão em desenvolvimento.</p></div>
+          <div class="catalog-tools"><span id="catalog-count">100 PRODUÇÕES</span><select id="catalog-filter" aria-label="Filtrar catálogo"><option value="all">Todas as produções</option><option value="film">Filmes</option><option value="series">Séries</option><option value="animation">Animações</option></select></div>
+          <div id="all-grid" class="poster-grid"></div>
+        </section>
+        <section id="pedro-view" class="view is-hidden">
+          <section class="pedro-hero">
+            <div class="pedro-lightning lightning-one"></div><div class="pedro-lightning lightning-two"></div><div class="pedro-lightning lightning-three"></div>
+            <div class="pedro-sigil">P</div>
+            <div class="pedro-copy"><p class="eyebrow">PPO ESTÚDIOS APRESENTA</p><div class="pedro-overline">UMA SÉRIE ORIGINAL</div><h1>PEDRO<br><span>PRIME</span></h1><p class="pedro-subtitle">O INÍCIO DE UM NOVO UNIVERSO.</p><p class="pedro-description">Um adolescente. Poderes que ele ainda não compreende. E uma cidade prestes a descobrir que nunca mais será a mesma.</p><button class="primary-button" data-modal="pedro-prime">DESCUBRA A SÉRIE <span>→</span></button></div>
+            <div class="pedro-bottom">TERRA 1001 <span>•</span> PPO ORIGINAL</div>
+          </section>
+          <section class="content-section"><div class="section-heading"><div><p class="eyebrow">A JORNADA COMEÇA</p><h2>Pedro Prime: Origens</h2></div><span class="coming-label">EM BREVE</span></div><div class="pedro-feature-card" data-modal="pedro-prime"><div class="pedro-feature-symbol">P</div><div><span class="tagline">TEMPORADA 01</span><h3>Pedro Prime — Origens</h3><p>A história de como tudo começou.</p></div><button class="round-arrow" aria-label="Mais informações">↗</button></div></section>
+        </section>
+      </div>
+      <footer class="site-footer"><div class="footer-brand">PPO<span>.</span> ESTÚDIOS</div><p>Histórias que criam universos.</p><small>© 2026 PPO Estúdios. Todos os direitos reservados. Este é um protótipo de catálogo.</small></footer>
+    </section>
+  </main>
+
+  <div id="title-modal" class="modal-backdrop is-hidden" role="dialog" aria-modal="true">
+    <div class="title-modal-card"><button id="modal-close" class="modal-close" aria-label="Fechar">×</button><div id="modal-art" class="modal-art"></div><div class="modal-info"><p class="eyebrow">PPO ESTÚDIOS • PRODUÇÃO ORIGINAL</p><h2 id="modal-title">Título</h2><p id="modal-description"></p><span class="coming-label">EM BREVE</span></div></div>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
